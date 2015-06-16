@@ -56,7 +56,6 @@ $sql = "SELECT * FROM(SELECT movie_about.*,movie_data.area FROM movie_about inne
     $connection = connectMySQL();
     $number = $page * 30;
     $sql = $sql." limit {$number},30";
-    echo $sql;
     $result = selectMySQL($sql);
     $i = 0;
     while($row = mysql_fetch_array($result)) {

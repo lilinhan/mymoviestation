@@ -45,7 +45,9 @@ include('server.php');
         }
     }
     ?>
-
+    <?php
+    if(isset($_GET['name'])) {
+    ?>
     <table class="table">
             <tr>
                 <td>名称:<?php echo $name?></td>
@@ -55,8 +57,10 @@ include('server.php');
                 <td>年份：<?php echo $year?></td>
                 <td>评分：<?php echo $score?></td>
             </tr>
-
     </table>
+    <?php
+    }
+    ?>
 </div>
 </body>
 </html>
