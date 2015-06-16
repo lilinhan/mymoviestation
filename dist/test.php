@@ -19,7 +19,7 @@
                 <div class="col-xs-offset-1 col-xs-2">
                     <?php
                         if ($_SESSION['login'] == true) {
-                            echo '<a href="ucenter.php" class="bg-info" style="text-decoration: underline">个人中心</a> ';
+                            echo '<a href="manager.php" class="bg-info" style="text-decoration: underline">个人中心</a> ';
                             echo '<button class="btn btn-primary btn-logout" type="button">退出</button>';
                         } else {
                             echo '<button class="btn btn-primary btn-signin" type="button">登录</button>';

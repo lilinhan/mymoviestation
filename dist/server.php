@@ -2,7 +2,10 @@
 //链接数据库
 session_start();
 
-function connectMySQL( $db_host , $db_user ,$db_psw ) {
+function connectMySQL() {
+    $db_host = "localhost";
+    $db_user = "root";
+    $db_psw = "lewin123";
     $connection = mysql_connect($db_host,$db_user,$db_psw);
     if(!$connection){
         die('链接MySQL服务器失败！');
@@ -10,16 +13,19 @@ function connectMySQL( $db_host , $db_user ,$db_psw ) {
     //echo '连接MySQL服务器成功！<br />';
     mysql_select_db("moviedb", $connection);
     mysql_query("set character set 'utf8'");
+    return $connection;
 }
 //查询
 function selectMySQL( $sql ) {
     $result = mysql_query($sql);
-    $res = array();
-    while($row = mysql_fetch_array($result))
-    {
-        $res[] = $row;
-    }
-
+    /*
+      $res = array();
+     while($row = mysql_fetch_array($result))
+      {
+          $res[] = $row;
+      }
+      */
+    return $result;
 }
 //验证密码
 function makeSurePasswd( $account , $passwd ) {

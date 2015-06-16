@@ -1,6 +1,10 @@
 <?php
 //链接数据库
 session_start();
+include('server.php');
+$page = 0;
+if (isset($_GET["page"]))
+    $page = $_GET["page"];
 ?>
 <!DOCTYPE html>
 <html>
@@ -22,8 +26,46 @@ session_start();
         <?php include('showbody.php'); ?>
     </div>
     <div class="show-movie" id="show-movie">
-        <div class="one col-xs-offset-2 col-xs-2">
+            <?php
+            $connection = connectMySQL();
+            $number = $page * 30;
+            $sql = "SELECT movie_about.*,movie_uri.jpg FROM movie_about,movie_uri where movie_about.id = movie_uri.id ORDER BY id asc limit {$number},30";
+            //echo $sql;
+            $result = selectMySQL($sql);
+            $i = 0;
+            while($row = mysql_fetch_array($result)) {
+               // var_dump($row);
+                if ($i % 6 == 0) {
+                    echo '<div class="row">';
+                }
+            ?>
+                <div class="col-xs-2">
+                    <img class="img-rounded"
+                         src="<?php echo $row['jpg'] ?>"
+                         alt="movie jpg" width="150" height="200">
+                    <h4><?php echo $row['name']; ?></h4>
 
+                    <p>画质：<?php echo $row['picture']; ?></p>
+
+                    <p>时间：<?php echo $row['year'] . "年"; ?></p>
+
+                    <p><a class="btn btn-default" href="info.php?name=<?php echo ?>" role="button">查看详情 &raquo;</a></p>
+                </div><!-- /.col-lg-4 -->
+            <?php
+                if ($i % 6 == 5) {
+                    echo '</div>';
+                }
+                $i++;
+            }
+
+            ?>
+
+            <nav>
+                <ul class="pager"  style="width:200px; position: absolute; right: 20px;">
+                    <li class="previous"><a href="./index.php?page=<?php echo ($page-1)?>"><span aria-hidden="true">&larr;</span> Older</a></li>
+                    <li class="next"><a href="./index.php?page=<?php echo ($page+1)?>">Newer <span aria-hidden="true">&rarr;</span></a></li>
+                </ul>
+            </nav>
         </div>
     </div>
     <script src="./js/jquery.min.js"></script>
@@ -95,6 +137,7 @@ session_start();
 
             location.href= "info.php?wd=" + keyword;
         });
+
     </script>
 </body>
 </html>

@@ -27,45 +27,59 @@
     </div>
 
     <div class="classification-show">
-        <label  class="col-sm-3 control-label">按国家和地区</label>
         <div class="col-xs-4">
-            <ul>
-                <li><a href="">大陆</a> </li>
-                <li><a href="">香港</a> </li>
-                <li><a href="">美国</a> </li>
-                <li><a href="">韩国</a> </li>
-                <li><a href="">台湾</a> </li>
-                <li><a href="">法国</a> </li>
-                <li><a href="">英国</a> </li>
-                <li><a href="">泰国</a> </li>
-                <li><a href="">印度</a> </li>
-                <li><a href="">其他</a> </li>
-            </ul>
+            <label  class="control-label">按国家和地区</label>
+            <table class="table">
+                    <tr class="list-class">
+                        <td><a href="">香港</a> </td>
+                        <td><a href="">美国</a> </td>
+                        <td><a href="">韩国</a> </td>
+                        <td><a href="">台湾</a> </td>
+                    </tr>
+                    <tr>
+                        <td><a href="">法国</a> </td>
+                        <td><a href="">英国</a> </td>
+                        <td><a href="">泰国</a> </td>
+                        <td><a href="">印度</a> </td>
+                </tr>
+                <tr>
+                        <td><a href="">其他</a> </td>
+                    </tr>
+            </table>
         </div>
-        <label class="col-sm-3 control-label">按国家和地区</label>
         <div class="col-xs-4">
-            <ul>
-                <li><a href="">喜剧</a> </li>
-                <li><a href="">恐怖</a> </li>
-                <li><a href="">爱情</a> </li>
-                <li><a href="">动作</a> </li>
-                <li><a href="">科幻</a> </li>
-                <li><a href="">武侠</a> </li>
-                <li><a href="">战争</a> </li>
-                <li><a href="">犯罪</a> </li>
-                <li><a href="">惊悚</a> </li>
-                <li><a href="">剧情</a> </li>
-            </ul>
+            <label class="control-label">类型</label>
+                <table class="table">
+                    <tr class="list-class">
+                        <td><a href="">喜剧</a> </td>
+                        <td><a href="">恐怖</a> </td>
+                        <td><a href="">爱情</a> </td>
+                        <td><a href="">动作</a> </td>
+                    </tr>
+                    <tr>
+                        <td><a href="">科幻</a> </td>
+                        <td><a href="">武侠</a> </td>
+                        <td><a href="">战争</a> </td>
+                        <td><a href="">犯罪</a> </td>
+                    </tr>
+                    <tr>
+                        <td><a href="">惊悚</a> </td>
+                        <td><a href="">剧情</a> </td>
+                    </tr>
+                </table>
         </div>
-        <label class="col-sm-3 control-label">按年份</label>
         <div class="col-xs-4">
-            <ul>
-                <li><a href="">2015</a> </li>
-                <li><a href="">2014</a> </li>
-                <li><a href="">2013</a> </li>
-                <li><a href="">2012</a> </li>
-                <li><a href="">2011</a> </li>
-            </ul>
+            <label class="control-label">按年份</label>
+            <table class="table">
+                <tr class="list-class">
+                    <td><a href="">2015</a> </td>
+                    <td><a href="">2014</a> </td>
+                    <td><a href="">2013</a> </td>
+                    <td><a href="">2012</a> </td>
+                </tr>
+                <tr>
+                    <td><a href="">2011</a> </td>
+                </tr>
+            </table>
         </div>
-    </div>
 </div>

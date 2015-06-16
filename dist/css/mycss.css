@@ -69,3 +69,39 @@ body {
     margin-right: auto;
     margin-top: 20px
 }
+
+.manager {
+    margin-top: 10px;
+    width: 90%;
+    position: absolute;
+    top: 80px;
+    right: 63px;
+}
+
+.addmovie{
+    margin-top: 150px;
+    width: 50%;
+    position: absolute;
+    top:30px;
+    right: 300px;
+}
+
+.addmovie.addmovie-button{
+    position: absolute;
+    right: 40px;
+}
+
+.classification-show{
+    height: 200px;
+    text-align: center;
+}
+
+.list-class {
+    list-style: none;
+    margin-left: 100px;
+}
+
+.show-movie {
+    padding-left: 20px;
+    padding-right: 20px;
+}

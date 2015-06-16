@@ -16,8 +16,14 @@ session_start();
 </head>
 <body>
 <div class="container nav">
-    <?php include('test.php'); ?>
+    <?php include('manager.php'); ?>
 </div>
-
+<div class="addmovie">
+    <div class="input-group">
+        <span class="input-group-addon" id="sizing-addon2">电影名称</span>
+        <input type="text" class="form-control" placeholder="电影名称" aria-describedby="sizing-addon2">
+    </div>
+    <button type="addmovie-button" class="btn btn-primary">提交</button>
+</div>
 </body>
 </html>

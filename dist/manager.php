@@ -18,6 +18,14 @@ session_start();
 <div class="container nav">
     <?php include('test.php'); ?>
 </div>
-
+<div class="manager">
+    <ul class="nav nav-pills ">
+        <li role="presentation" class="active"><a href="index.php">主页</a></li>
+        <li role="presentation"><a href="addmovie.php">增加电影</a></li>
+        <li role="presentation"><a href="removemovie.php">删除电影</a></li>
+        <li role="presentation"><a href="changemovie.php">修改电影</a></li>
+        <li role="presentation"><a href="searchmovie.php">查找电影</a></li>
+    </ul>
+</div>
 </body>
 </html>
