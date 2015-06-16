@@ -31,19 +31,19 @@
             <label  class="control-label">按国家和地区</label>
             <table class="table">
                     <tr class="list-class">
-                        <td><a href="">香港</a> </td>
-                        <td><a href="">美国</a> </td>
-                        <td><a href="">韩国</a> </td>
-                        <td><a href="">台湾</a> </td>
+                        <td><a href="list.php?area=香港">香港</a> </td>
+                        <td><a href="list.php?area=美国">美国</a> </td>
+                        <td><a href="list.php?area=韩国">韩国</a> </td>
+                        <td><a href="list.php?area=台湾">台湾</a> </td>
                     </tr>
                     <tr>
-                        <td><a href="">法国</a> </td>
-                        <td><a href="">英国</a> </td>
-                        <td><a href="">泰国</a> </td>
-                        <td><a href="">印度</a> </td>
+                        <td><a href="list.php?area=法国">法国</a> </td>
+                        <td><a href="list.php?area=英国">英国</a> </td>
+                        <td><a href="list.php?area=泰国">泰国</a> </td>
+                        <td><a href="list.php?area=印度">印度</a> </td>
                 </tr>
                 <tr>
-                        <td><a href="">其他</a> </td>
+                        <td><a href="list.php?area=其他">其他</a> </td>
                     </tr>
             </table>
         </div>
@@ -51,20 +51,20 @@
             <label class="control-label">类型</label>
                 <table class="table">
                     <tr class="list-class">
-                        <td><a href="">喜剧</a> </td>
-                        <td><a href="">恐怖</a> </td>
-                        <td><a href="">爱情</a> </td>
-                        <td><a href="">动作</a> </td>
+                        <td><a href="list.php?class=喜剧">喜剧</a> </td>
+                        <td><a href="list.php?class=恐怖">恐怖</a> </td>
+                        <td><a href="list.php?class=爱情">爱情</a> </td>
+                        <td><a href="list.php?class=动作">动作</a> </td>
                     </tr>
                     <tr>
-                        <td><a href="">科幻</a> </td>
-                        <td><a href="">武侠</a> </td>
-                        <td><a href="">战争</a> </td>
-                        <td><a href="">犯罪</a> </td>
+                        <td><a href="list.php?class=科幻">科幻</a> </td>
+                        <td><a href="list.php?class=武侠">武侠</a> </td>
+                        <td><a href="list.php?class=战争">战争</a> </td>
+                        <td><a href="list.php?class=犯罪">犯罪</a> </td>
                     </tr>
                     <tr>
-                        <td><a href="">惊悚</a> </td>
-                        <td><a href="">剧情</a> </td>
+                        <td><a href="list.php?class=惊悚">惊悚</a> </td>
+                        <td><a href="list.php?class=剧情">剧情</a> </td>
                     </tr>
                 </table>
         </div>
@@ -72,13 +72,13 @@
             <label class="control-label">按年份</label>
             <table class="table">
                 <tr class="list-class">
-                    <td><a href="">2015</a> </td>
-                    <td><a href="">2014</a> </td>
-                    <td><a href="">2013</a> </td>
-                    <td><a href="">2012</a> </td>
+                    <td><a href="list.php?year=2015">2015</a> </td>
+                    <td><a href="list.php?year=2014">2014</a> </td>
+                    <td><a href="list.php?year=2013">2013</a> </td>
+                    <td><a href="list.php?year=2012">2012</a> </td>
                 </tr>
                 <tr>
-                    <td><a href="">2011</a> </td>
+                    <td><a href="list.php?year=2011">2011</a> </td>
                 </tr>
             </table>
         </div>
