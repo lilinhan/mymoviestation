@@ -1,6 +1,6 @@
 <?php
-//链接数据库
 session_start();
+//链接数据库
 
 function connectMySQL() {
     $db_host = "localhost";
@@ -18,13 +18,7 @@ function connectMySQL() {
 //查询
 function selectMySQL( $sql ) {
     $result = mysql_query($sql);
-    /*
-      $res = array();
-     while($row = mysql_fetch_array($result))
-      {
-          $res[] = $row;
-      }
-      */
+
     return $result;
 }
 //验证密码
@@ -43,10 +37,6 @@ function makeSurePasswd( $account , $passwd ) {
         return true;
     else
         return false;
-}
-//执行修改
-function changeMySQLData($sql) {
-    mysql_query($sql);
 }
 
 function do_login() {
@@ -86,14 +76,14 @@ function do_logout() {
 }
 
 
+
 $action = $_POST['action'];
-switch($action) {
-    case 'login':
-        do_login();
-        break;
-    case 'logout':
-        do_logout();
-        break;
+switch ($action) {
+        case 'login':
+            do_login();
+            break;
+        case 'logout':
+            do_logout();
+            break;
 }
-?>
 

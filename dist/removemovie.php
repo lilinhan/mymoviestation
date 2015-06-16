@@ -18,12 +18,15 @@ session_start();
 <div class="container nav">
     <?php include('manager.php'); ?>
 </div>
-<div class="addmovie">
-    <div class="input-group">
-        <span class="input-group-addon" id="sizing-addon2">电影名称</span>
-        <input type="text" class="form-control" placeholder="电影名称" aria-describedby="sizing-addon2">
-    </div>
-    <button type="addmovie-button" class="btn btn-primary">提交</button>
+<div class="delmovie">
+    <form class="submit-delmovie" action="./doaction.php" method="get">
+        <div class="input-group">
+            <span class="input-group-addon" id="sizing-addon2">电影id</span>
+            <input name="act" value="delMovie" style="display: none"/>
+            <input type="text" class="form-control" placeholder="电影id" aria-describedby="sizing-addon2" name="id">
+        </div>
+        <button type="addmovie-button" class="btn btn-primary">提交</button>
+    </form>
 </div>
 </body>
 </html>

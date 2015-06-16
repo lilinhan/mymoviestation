@@ -1,10 +1,14 @@
 <?php
 //链接数据库
 session_start();
+
+if (isset($_GET["id"])) {
+    $id = $_GET["id"];
+}else {
+    echo '<script>location.href="./index.php";</script>';
+}
+
 include('server.php');
-$page = 0;
-if (isset($_GET["page"]))
-    $page = $_GET["page"];
 ?>
 <!DOCTYPE html>
 <html>
@@ -23,11 +27,56 @@ if (isset($_GET["page"]))
     <?php include('test.php'); ?>
 </div>
 
-<div class="show-movieinfo">
+<div class="show-movieinfo col-xs-8 col-xs-offset-2">
     <?php
-        $connection = connectMySQL();
-        $sql = "SELECT movie_about.*,movie_uri.*,movie_data.* FROM movie_about,movie_uri,movie_data where movie_about.id = movie_uri.id AND movie_about.id = movie_data.id";
+    $connection = connectMySQL();
+    $sql = "SELECT movie_about.*,movie_uri.*,movie_data.* FROM movie_about,movie_uri,movie_data where movie_about.id ="."'{$id}'". "AND movie_uri.id ="."'{$id}'"."AND movie_data.id = "."'{$id}'";
+    $result = selectMySQL($sql);
+    while($row = mysql_fetch_array($result)) {
+        $name =  $row['name'];
+        $picture = $row['picture'];
+        $classfication = $row['classfication'];
+        $year = $row['year'];
+        $score = $row['score'];
+        $download = $row['download'];
+        $jpg = $row['jpg'];
+        $area = $row['area'];
+        $director = $row['director'];
+        $star = $row['star'];
+        $summary = $row['summary'];
+    }
     ?>
+    <div class="show-movieinfo-contents">
+        <div class="show-movie-jpg col-xs-2">
+            <img class="img-rounded"
+                 src="<?php echo $jpg ?>"
+                 alt="movie jpg" width="150" height="200">
+        </div>
+        <div class="show-movie-info col-xs-10">
+            <h4><?php echo $name; ?></h4>
+            <p>画质：<?php echo $picture; ?></p>
+            <p>时间：<?php echo $year . "年"; ?></p>
+            <p>分类：<?php echo $classfication; ?></p>
+            <p>地区：<?php echo $area; ?></p>
+            <p>导演：<?php echo $director; ?></p>
+            <p>主演：<?php echo $star; ?></p>
+            <p>豆瓣评分：<?php echo $score; ?></p>
+        </div>
+    </div>
+    <div class="show-movie-brief">
+        <p>简介：</p>
+        <p><?php echo $summary; ?></p>
+    </div>
+    <div class="show-movie-download">
+        <div class="show-movie-download-info col-xs-10">
+            <button class="btn btn-info disabled">下载请戳：</button>
+            <a href="<?php echo $download ; ?>"><?php echo $download?></a>
+        </div>
+        <div class="return col-xs-2">
+            <a class="btn btn-info" href="index.php">返回首页</a>
+        </div>
+    </div>
+
 </div>
 
 <script src="./js/jquery.min.js"></script>

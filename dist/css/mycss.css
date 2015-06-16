@@ -105,3 +105,36 @@ body {
     padding-left: 20px;
     padding-right: 20px;
 }
+
+.show-movieinfo{
+    margin-top: 250px;
+    margin-left:50%;
+    left:-width/2;
+}
+.show-movie-download {
+    margin-top: 30px;
+}
+
+.delmovie{
+    margin-top: 150px;
+    width: 50%;
+    position: absolute;
+    top:30px;
+    right: 300px;
+}
+
+.search-movie-table{
+    margin-top: 150px;
+    width: 50%;
+    position: absolute;
+    top:30px;
+    right: 300px;
+}
+
+.show-search-movie{
+    position: absolute;
+    top: 400px;
+    margin-left: 350px;
+    ma
+    text-align: center;
+}

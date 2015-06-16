@@ -49,7 +49,7 @@ if (isset($_GET["page"]))
 
                     <p>时间：<?php echo $row['year'] . "年"; ?></p>
 
-                    <p><a class="btn btn-default" href="info.php?name=<?php echo ?>" role="button">查看详情 &raquo;</a></p>
+                    <p><a class="btn btn-default" href="info.php?id=<?php echo $row['id']?>" role="button">查看详情 &raquo;</a></p>
                 </div><!-- /.col-lg-4 -->
             <?php
                 if ($i % 6 == 5) {
